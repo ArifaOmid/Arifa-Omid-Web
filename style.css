@@ -1,0 +1,107 @@
+body{
+  font-family: 'Coming Soon', cursive;
+}
+
+h1{
+color:black;
+font-size: 36px;
+}
+
+.center{
+  text-align:center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.nav{
+  font-family: 'Poppins', sans-serif;
+  display:block;
+  background-color:antiquewhite;
+  overflow:hidden;
+  border: 1px dotted;
+}
+
+.nav a{
+  font-family: 'Poppins', sans-serif;
+  cursor:pointer;
+  color:black;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav a:hover:not(:first-child){
+  color: rgba(0, 0, 0, 0.336);
+  background-color: burlywood;
+  animation: colorchange 1s
+  infinite alternate;
+}
+
+.nav a{
+  list-style-type:none;
+  text-align: center;
+  flex-direction: row;
+}
+
+.nav a.active{
+color:lightcoral;
+}
+
+.nav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 736px) {
+  .nav a:not(:first-child) {display: none;}
+  .nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .nav.responsive {position: relative;}
+  .nav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.colors{
+  animation: colorchange 5s
+  infinite alternate;
+}
+@keyframes colorchange{
+    0%{color: #F7630C}
+    20%{color:#EA005E}
+    40%{color:#8E8CD8}
+    60%{color:#00B7C3}
+    80%{color:#68768A}
+    100%{color:#79797E}
+}
+
+@-webkit-keyframes colorchange{
+    0%{color: #F7630C}
+    20%{color:#EA005E}
+    40%{color:#8E8CD8}
+    60%{color:#00B7C3}
+    80%{color:#68768A}
+    100%{color:#79797E}
+}
+
+p{
+  font-size: 18px;
+  margin-left: 15%;
+  margin-right:15%;
+  margin-top: 20px;
+}
